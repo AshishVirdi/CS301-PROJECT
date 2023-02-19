@@ -1,0 +1,65 @@
+
+
+
+About:
+
+This project is about the Train-Reservation-System which is used to add trains,check availability of the tickets for a particular train and book the required number of tickets. 
+
+Schema:
+
+There are 3 tables available in our code:
+ Trains : The table train contains the attributes coach_type,doj,Train_id,berth_type,berth_no,coach_no..
+
+Passengers: The table passengers contains the attributes pnr and name.
+
+Tickets: The table tickets consists of the attributees doj,Train_id,berth_tyoe,coach_type,coach_no,berth_no.
+ 
+Stored procedures:
+the stored procedures in our code are:
+Add_train: we are basically adding the trains for them to be booked.
+Book_berth: this procedure is basically used to assign available coach number and berth number to  a group of passnegers. 
+
+Files:
+
+The files in our code are following:
+
+Insert_train.java 
+ServiceModule.java
+Client.java
+sendQuery.java
+Invokeworkers.java
+dbdb.sql
+
+How to compile:
+
+
+Online Train Information and Reservation:
+1.Open postgres sql server.
+2.Create a database named do using CREATE DATABASE db.
+3.Add the password to database 1212 using command '\password 1212'.
+4.Now copy the contents of dbdb sq| and stored_procedures sql.
+5.Now compile all java files present : client,invokeWorkers, sendQuery, ServiceModule, insert_train.
+6.Now run insert_train fle to store the trains in the database.
+7.Now you run ServiceModule which will then wait for clients.
+8.Now run the client on a separate terminal to run all output files concurrently on the database.
+9.Now output files will be generated in folder Output for each respective input which will tell the status of the ticket for each user.
+
+Technologies used:
+java
+postgres
+
+What is expected from the output:
+
+Each output file will tell the status of the user ticket. If the train is not avallable or seats not avalable then booking will fail and wil be shown in the output file. If the booking operation is successful, output wil have the ticket descripbon for each passenger requested by the user.
+
+
+
+
+
+
+
+
+
+
+
+
